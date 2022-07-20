@@ -1,0 +1,299 @@
+.Navbar {
+    background-color: #400b3e;
+    height: 5vw;
+    width: 38vw;
+    /* border: 2px solid blanchedalmond; */
+    margin-left: 4vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1vw;
+    font-size: 18px;
+    margin-right: 20vw;
+    color: whitesmoke;
+}
+.mainnavbar{
+  background-color: #400b3e;
+  display: flex;
+  justify-content: space-between;
+  border: 0.9px solid  white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+/* position: fixed; */
+
+
+  
+
+}
+.t{
+    height: 20vw;
+
+    width: 40vw;
+
+    
+}
+.T{
+    position: relative;
+    right: 10vw;
+}
+
+.item{
+    margin-top: 10px;
+    margin-left: 1vw;
+}
+.navsecond{
+    background-color: #400b3e;
+    height: 5vw;
+    width: 38vw;
+    /* border: 2px solid blanchedalmond; */
+    padding-top: 0.8vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+
+
+
+}
+.smallbox{
+    /* border: 2px solid blanchedalmond; */
+   padding: auto;
+    width: 14vw;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: white;
+    margin-left: 2vw;;
+
+}
+
+.btn{
+    height: 7vh;
+width: 10vw;
+border-radius: 3vw;
+font-size: 18px;
+background-color: #FFF3ED;
+color: #d45dd0;
+}
+.btn:hover{
+    background-color: #701c78;
+    cursor: pointer;
+}
+.item:hover{
+    color: #701c78;
+    cursor: pointer;
+}
+.imgicon{
+    filter: invert(0.90);
+}
+
+
+
+/* upperbase Css */
+
+.password{
+    
+        position: relative;
+        bottom: 3vw;
+
+        cursor: pointer;
+        left : 11vw;
+
+}
+.upperbase{
+    background-color: #400b3e;
+    height: 70vw;
+}
+
+.uppertitle{
+    font-family: 'GT Haptik Medium',sans-serif;
+    font-weight: 400;
+    font-size: clamp(5rem * 0.5, 4.9vw, 5rem);
+    text-align: left;
+    color: #FFF3ED;
+margin-bottom: 25px;
+max-width: 950px;
+margin-left: 10vw;
+padding-top: 1vw;
+
+}
+.upperbodytwo{
+    line-height: 1.5;
+    font-size: clamp( 1.5rem * 0.8, 1.65vw, 1.5rem );
+    margin-bottom: 40px;
+    max-width: 80%;
+    color: #FCE5D8;
+padding-left: 10vw;
+height: auto;
+}
+.imgiconlogo{
+    filter: invert(0.50);
+    
+  margin-left: 7px;
+
+}
+.imgiconlogo:hover{
+cursor: pointer;
+filter: invert(8.50);
+
+}
+
+.signupbtn:hover{
+cursor: pointer;
+background-color: #948685;
+}
+.signupbtn{
+    background-color:#c938c4;
+    border: #c938c4;
+}
+
+.justTime{
+    color: #FCE5D8;
+    padding-top: 12px;
+    font-family: 'GT Haptik Medium',sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.5rem * 0.8, 2vw, 1.5rem);
+  
+    /* position: absolute; */
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #e8d0cf;
+    color: black;
+    top: 145px;
+    left: 40px;
+    height: 7vw;
+    /* opacity: 2; */
+    -webkit-transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+.just{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #E57CD8;
+ 
+}
+.span{
+    border: 2px solid #E57CD8;
+   
+
+
+}
+
+.span:hover{
+    color: #E57CD8;
+cursor: pointer;
+    
+}
+
+.slow {
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 10rem;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    animation: slow 3s ease forwards;
+    /* border: 2px solid black; */
+
+  }
+  
+  @keyframes slow {
+    from {
+      max-width:5rem;
+    }
+    to {
+      max-width: 10rem;
+    }
+  }
+
+  .stand{
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 10rem;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    animation: slow 2s ease forwards;
+    /* border: 2px solid black; */
+
+  }
+
+  @keyframes stand {
+    from {
+      max-width:5rem;
+    }
+    to {
+      max-width: 10rem;
+    }
+  }
+
+  .svg svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+.active .Timerstop {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 2s;
+}
+.svg{
+    position: relative;
+    /* top: 2vw; */
+    bottom: 15px;
+}
+.banner{
+    width: 73vw;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vw;
+    margin-left: 14vw;
+
+}
+
+
+.formButton2{
+
+        font-family: 'GT Haptik Medium',sans-serif;
+        font-size: 1rem;
+        background: white;
+        width: 18vw;
+font-weight: 600;
+        border: none;
+        color: #2C1338;
+border:2px solid black;
+border-radius: 2vw;
+        cursor: pointer;
+        margin-bottom: 2vw;
+       
+
+}
+.Symbols:hover{
+    cursor: pointer;
+}
+.signupbyn{
+    background-color: #d64ba5;
+    border: #2C1338;
+}
+.Loginin{
+    background-color: #c938c4;
+    border: 2px solid #c938c4 ;
+    font-weight: bold;
+}
+
+.Loginin:hover{
+    background-color: #614d5b;
+    border: 2px solid #614d5b;
+    cursor: pointer;
+}
+
+
+.signupbyn:hover{
+ 
+    cursor: pointer;
+    background-color: #735568;
+    border: #2C1338;
+}
