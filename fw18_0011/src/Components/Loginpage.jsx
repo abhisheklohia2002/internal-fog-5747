@@ -1,43 +1,43 @@
 import React from 'react'
 import './navbar.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import UpperLogin from "./LoginUpper"
+import { useState,useEffect } from 'react';
 const Login = () => {
+    const [Theme,setTheme] = useState("transparent");
+    const jump = useNavigate();
+
+   const runProgram  = ()=>{
+    setTheme("#400b3e");
+    
+   }
+   const RunColor = ()=>{
+    setTheme("0");
+
+   }
+   const getback  = useNavigate();
+
+
+   const Getback = ()=>{
+getback("/");
+
+   }
+   const SignupPage = ()=>{
+        jump("/signup")
+   }
   return (
     <>
-    <div className='mainnavbar' style={{position:'fixed'}}>
-    <div className='Navbar'>
-        <div style = {{display:"flex",position:'relative',rigth:"1vw",top:"0.4vw"}}>
+    <div style={{background:""}}>
+    <div onMouseEnter={RunColor}   className='mainnavbar' style={{position:'fixed',background:Theme}}>
+    <div style={{background:Theme}} className='Navbar'>
+        <div onClick={Getback} style = {{display:"flex",position:'relative',rigth:"1vw",top:"0.4vw",cursor:"pointer"}}>
            <svg style={{height:"2.2vw"}} viewBox='0 0 167 33' fill = "#E57CD8" >
-            {/* <defs>
-                <mask fill = "#fff">
-                    <path  d= "M.093.352h19.671v30.56H.094z"></path>
-                </mask>
-                <mask fill = "#fff">
-                    <path  d= "M.054.352h20.41v30.56H.054z"></path>
-                </mask>
-
-                <mask fill = "#fff">
-                    <path  d= "M.288.176H10.33v26.141H.288z"></path>
-                </mask>
-
-                <mask fill = "#fff">
-                    <path  d= "M0 .176h14.934v26.142H0z"></path>
-                </mask>
-
-
-                <mask fill = "#fff">
-                    <path  d= "M.215.045H14.5v22.34H.215z"></path>
-                </mask>
-
-                </defs> */}
+           
 
                 <path d= "M103.51 25.802a10.27 10.27 0 01-1.36.084c-1.515 0-2.651-.35-3.409-1.05-.757-.702-1.136-1.924-1.136-3.665V10.586h-3.614V8.754h3.614V4.208h2.1v4.546h4.992v1.832h-4.992v10.686c0 .905.184 1.578.551 2.02.367.44 1.033.66 1.997.66.528 0 .987-.021 1.377-.067.39-.045.78-.102 1.17-.17v1.833c-.436.113-.866.197-1.29.254">
 
                 </path>
-                {/* <path d = "M19.761 26.378c-.049-1.438-.48-2.962-1.577-3.966-1.226-1.12-3-1.635-4.648-1.635H6.19c-.725 0-1.369-.537-1.369-1.2 0-.557.386-1.024.91-1.16-.002 0 .123-.032.258-.074 1.315.622 2.799.903 4.28.903 2.266 0 4.537-.656 6.2-2.188 1.618-1.49 2.374-3.576 2.374-5.709 0-2.134-.756-4.22-2.375-5.71A7.532 7.532 0 0014.9 4.533c1.56.356 3.17-.085 4.28-1.97L16.058.353l-2.606 3.573a10.55 10.55 0 00-3.184-.473c-2.265 0-4.537.656-6.199 2.188-1.619 1.49-2.375 3.575-2.375 5.709 0 2.134.756 4.218 2.375 5.71.14.13.286.252.435.37l-.303.158c-.599.33-1.33.857-2.054 1.617C1.12 20.28.094 21.894.094 24.038c0 0-.143 4.578 5.192 4.578h3.865c.889 0 1.795.558 1.795 1.434 0 .317-.095.614-.258.862h7.39c1.119-1.225 1.737-2.962 1.683-4.534M8.958 9.938c.365-.36.865-.515 1.363-.515s.997.155 1.362.515c.356.35.522.841.522 1.343s-.166.992-.522 1.343c-.365.36-.864.515-1.362.515-.498 0-.998-.154-1.363-.515-.356-.35-.522-.84-.522-1.343 0-.502.166-.992.522-1.343">
-
-                </path> */}
+              
 <path d= "M20.46 26.378c-.05-1.438-.48-2.962-1.578-3.966-1.225-1.12-2.999-1.635-4.647-1.635l-8.529-.061c-.537 0-.948-.333-.948-.824 0-.405.204-1.009.718-1.11a10.56 10.56 0 003.152.464c2.266 0 4.537-.656 6.2-2.188 1.618-1.49 2.374-3.576 2.374-5.709 0-2.134-.756-4.22-2.374-5.71a7.532 7.532 0 00-1.567-1.107c1.56.356 3.17-.085 4.279-1.97L14.418.353l-2.605 3.573a10.557 10.557 0 00-3.185-.473c-2.265 0-4.536.656-6.199 2.188C.81 7.13.054 9.215.054 11.349c0 2.134.757 4.218 2.375 5.71.48.441 1.01.81 1.576 1.111-.374.28-.767.623-1.16 1.034C1.82 20.28.793 21.894.793 24.038c0 0-.142 4.578 5.193 4.578H9.85c.889 0 1.795.558 1.795 1.434 0 .317-.095.614-.258.862h7.39c1.119-1.225 1.738-2.962 1.683-4.534M7.37 9.938c.365-.36.864-.515 1.363-.515.498 0 .997.155 1.363.515.355.35.522.841.522 1.343s-.167.992-.522 1.343c-.366.36-.865.515-1.363.515-.499 0-.998-.154-1.363-.515-.356-.35-.522-.84-.522-1.343 0-.502.166-.992.522-1.343"
                  transform = "translate(39.22 1.913)"
                 ></path>
@@ -89,7 +89,7 @@ Careers  <img className='imgicon' style={{height:"10px"}} src='https://cdn-icons
         </div>
     </div>
 
-    <div className='navsecond'>
+    <div className='navsecond' style={{background:Theme}}>
 
         <div className='smallbox' style={{display:"flex",justifyContent:"space-evenly"}}>
         <div className='item' style={{height:"2vw"}}>Book a demo</div>
@@ -97,33 +97,37 @@ Careers  <img className='imgicon' style={{height:"10px"}} src='https://cdn-icons
         <div  className='item' style={{height:"2vw"}}> <Link className='Link' style={{textDecoration:"none" , color:"white"}} to = "/login"> Log in</Link></div>
         </div>
         <div>
-            <button className='btn'>Try for free</button>
+            <button onClick={SignupPage} className='btn'>Try for free</button>
         </div>
     </div>
 
    
 </div>
 <div>
-<div className='smallbox' style={{display:"flex",justifyContent:"space-evenly",opacity:"0"}}>
+<div className='smallbox' style={{display:"flex",justifyContent:"space-evenly",opacity:"-1"}}>
         <div className='item' style={{height:"2vw"}}>Book a demo</div>
         <div className='item'>|</div>
         <div  className='item' style={{height:"2vw"}}> <Link className='Link' style={{textDecoration:"none" , color:"white"}} to = "/login"> Log in</Link></div>
         </div>
-        <div className='smallbox' style={{display:"flex",justifyContent:"space-evenly"}}>
+        <div className='smallbox' style={{display:"flex",justifyContent:"space-evenly",opacity:"-1"}}>
         <div className='item' style={{height:"2vw"}}>Book a demo</div>
         <div className='item'>|</div>
         <div  className='item' style={{height:"2vw"}}> <Link className='Link' style={{textDecoration:"none" , color:"white"}} to = "/login"> Log in</Link></div>
         </div>
 </div>
 
-<div style={{textAlign:"center",fontSize:"2.3vw",height:"5vw"}}>
+<div   className = "navimg">
+        {/* <img  src={require()} alt="" /> */}
+      </div>
+<div onMouseEnter={runProgram} style={{textAlign:"center",fontSize:"2.3vw",height:"5vw",marginTop:"6vw",color:"white"}}>
  <h1>Log in to your account</h1>
 </div>
 
-    <h2 style={{textAlign:"center"}}>Let's get tracking!</h2>
+    <h2 style={{textAlign:"center",color:"white"}}>Let's get tracking!</h2>
 
 <div>
  <UpperLogin/>
+ </div>
  </div>
  </>
   )

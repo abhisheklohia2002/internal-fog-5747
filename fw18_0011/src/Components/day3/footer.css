@@ -1,0 +1,161 @@
+.Toogle{
+    background-color: #400b3e;
+    /* margin-bottom: 1vw; */
+}
+
+
+.maindiv1{
+  
+    background-color: #400b3e;
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.div1{
+color: bisque;
+    height: 16.8vw;
+    width: 15vw;
+}
+
+
+.div2{
+    /* border: 2px solid rgb(40, 40, 36); */
+    height: 16.8vw;
+    width: 15vw;
+color: bisque;
+
+}
+
+.div3{
+    /* border: 2px solid rgb(40, 40, 36);
+     */
+    height: 16.8vw;
+color: bisque;
+    
+    width: 15vw;
+}
+
+
+.div4{
+    /* border: 2px solid rgb(40, 40, 36); */
+    height: 16.8vw;
+    width: 15vw;
+color: bisque;
+
+}
+
+
+.div5{
+    /* border: 2px solid rgb(40, 40, 36); */
+    height: 16.8vw;
+    width: 15vw;
+color: bisque;
+
+}
+
+
+.div6{
+    /* border: 2px solid rgb(40, 40, 36); */
+    height: 16.8vw;
+    width: 15vw;
+color: bisque;
+
+}
+
+
+.title{
+    font-family: 'GT Haptik Medium',sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 1.5vw, 1.25rem * 1.1);
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 2.3vh;
+    margin: 10px 0 6px;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+    padding-left: 2vw;
+    margin-bottom: 1.5vw;
+
+}
+
+.uldiv{
+    font-family: 'GT Haptik Medium',sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 1.5vw, 1.25rem * 1.1);
+    line-height: 1.35;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+padding-left: 2vw;
+font-size: 16px;
+
+}
+.li{
+    margin-bottom: 14px;
+}
+
+.icon{
+    background-color: #400b3e;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.signupNav{
+    /* border: 2px solid black; */
+    height: 5vw;
+    padding-top: 3vw;
+    padding-left: 3vw;
+    background-color: #400b3e;
+    
+
+}
+
+.belowtitle{
+    font-size: clamp(2.5rem, 3.9vw, 4.2rem);
+    /* display: block; */
+    /* margin-bottom: 30px; */
+    background-color: #400b3e;
+
+    font-weight: 600;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+.LinkLogin{
+    color: #992895;
+}
+.LinkLogin:hover{
+    cursor: pointer;
+    color: antiquewhite;
+}
+.Toggletruck{
+
+
+    color: rgb(253, 241, 236);
+font-family: "GT Haptik Medium", sans-serif;
+font-weight: 400;
+font-size: 22px;
+/* font-size: clamp(1.2rem, 2vw, 1.5rem);
+ */
+line-height: 1.35;
+margin: 30px 0px;
+position: relative;
+/* border: 2px solid black; */
+width: 26vw;
+text-align: left;
+margin-left: 5vw;
+height: 13vw;
+}
+
+/* color: rgb(253, 241, 236);
+font-family: "GT Haptik Medium", sans-serif;
+font-weight: 400;
+font-size: clamp(1.2rem, 2vw, 1.5rem);
+line-height: 1.35;
+margin: 30px 0px;
+position: relative; */
