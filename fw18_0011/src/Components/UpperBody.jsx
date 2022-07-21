@@ -1,5 +1,6 @@
 import React, { useEffect, useState,useRef } from 'react'
 import './navbar.css'
+import Footer from './day3/Footerpage';
 
 const Upperbase = () => {
   const [Timer,setTimer] = useState(0);
@@ -8,7 +9,12 @@ const Upperbase = () => {
 const [Email,Setemail] = useState("");
 const [Pass,Setpass] = useState("");
 const [Passname,Setpassname] = useState("password")
-const [Colorchange,Setcolorchange] = useState("#400b3e")
+const [Theme1,setTheme1] = useState("transparent");
+const [Theme2,setTheme2] = useState("transparent");
+
+const [emailborder,setemailborder] = useState("2px solid white");
+const [passborder,setpassborder] = useState("2px solid white")
+
 // console.log(Email,Pass)
   const ref = useRef(null);
 
@@ -57,15 +63,45 @@ console.log(1)
     }
   }
 
-  const ChangeTheme = ()=>{
+ 
+const ColorChange1 = ()=>{
+  setTheme1("white");
+  setTheme2("transparent")
+}
+const ColorChange2 = ()=>{
+  setTheme2("white")
+  setTheme1("transparent")
 
+}
 
+const Checkdata  = ()=>{
+  var arr = JSON.parse(localStorage.getItem("data"));
+  var data = arr[0];
+  if(data.Info_one == Email && data.Info_two ==  Pass){
+    alert("successfull login")
   }
+  else{
+    if(Email == "" && Pass === ""){
+      setemailborder("2px solid red")
+      setpassborder("2px solid red")
 
-  
 
+    }
+    else if(Email == ""){
+      setemailborder("2px solid red")
+
+
+    }
+    else if(Pass == "" ){
+      setpassborder("2px solid red");
+
+    }
+   
+  }
+}
 
   return (
+    <>
     <div className='upperbase'>
       
       <div className='uppertitle'>
@@ -94,9 +130,9 @@ console.log(1)
 <div style={{width:"25vw",marginTop:"2vw"}}>
 
 {/* form input display */}
-<input className='inp1' onClick={ChangeTheme()} onChange={(e)=>Setemail(e.target.value)} placeholder='Email' type="email" style={{height:"3.2vw",width:"25vw",marginBottom:"2vw",color:"whitesmoke",backgroundColor:"#400b3e",border:"2px solid white",fontSize:"1.3vw"}}  />
+<input value = {Email} onClick = {ColorChange1} className='inp1' onChange={(e)=>Setemail(e.target.value)} placeholder='Email' type="email"  style={{height:"3.2vw",width:"25vw",marginBottom:"2vw",color:"black",backgroundColor:Theme1,border:emailborder,fontSize:"1.3vw"}}  />
 <br />
-<input className='InfoPass' onClick={ChangeTheme()}  onChange={(e)=>Setpass(e.target.value)} placeholder='A strong Password' type={Passname} style={{height:"3.2vw",width:"25vw",backgroundColor:"#400b3e",border:"2px solid white",fontSize:"1.3vw"}} />
+<input value = {Pass} onClick = {ColorChange2} className='InfoPass'   onChange={(e)=>Setpass(e.target.value)} placeholder='A strong Password' type={Passname} style={{color :"black",height:"3.2vw",width:"25vw",backgroundColor:Theme2,border:passborder,fontSize:"1.3vw"}} />
 <div onClick = {ShowPass} className = "password">
   <svg width = "35" height= "35" fill = "#FCE5D8" viewBox = "0 0 20 20 ">
     <g className='Symbols' stroke = "none" strokeWidth="1" fill = "none" fill-rule = "evenodd">
@@ -124,7 +160,7 @@ console.log(1)
 </div>
 <div style={{display:"flex",justifyContent:"space-between",width:"40vw",marginTop:"0",position:"relative",bottom:"3vw"}}>
 <div style={{paddingTop:"2vw"}}>
-<button className='signupbtn' style={{height:"3.8vw",width:"15vw",borderRadius:"5vw",fontSize:"15px",fontWeight:"bold",color:"white"}}>Sign up with email</button>
+<button onClick={Checkdata} className='signupbtn' style={{height:"3.8vw",width:"15vw",borderRadius:"5vw",fontSize:"15px",fontWeight:"bold",color:"white"}}>Sign up with email</button>
 </div>
 <div style={{paddingBottom:'2vw',height:"3.8vw",paddingBottom:"2vw"}}>
     or sign up with :<img  className='imgiconlogo'  style={{height:"3.7vw",width:"3.7vw",position:"relative",top:"2vw",borderRadius:"80%",border:"2px solid white"}} src="https://icon-library.com/images/google-g-icon/google-g-icon-29.jpg" alt="" /><img className='imgiconlogo' style={{height:"4vw",width:"4vw",position:"relative",top:"2vw",borderRadius:"80%"}} src="https://cdn2.iconfinder.com/data/icons/social-icons-circular-color/512/apple-512.png" alt="" /> 
@@ -240,9 +276,12 @@ console.log(1)
 
         </div>
       </div>
+
      
+      </>
    
   )
 }
 
-export default Upperbase
+export default Upperbase;
+
