@@ -1,7 +1,47 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Footer from './day3/Footerpage'
 const FormDataSubmit = () => {
 const [Passname,Setpassname] = useState("password")
+const [Email,setEmail]  = useState("")
+const [pass,Setpass]  = useState("")
+const [store,Setstore] = useState([]);
+let navigate = useNavigate()
+    const [Theme1,setTheme1] = useState("transparent")
+    const [Theme2,setTheme2] = useState("transparent")
+    const [emailborder,setemailborder] = useState("2px solid white");
+    const [passborder,setpassborder] = useState("2px solid white")
+let getback = useNavigate();
+
+    const Runprogram = ()=>{
+      var arr = JSON.parse(localStorage.getItem('data'));
+      var data = arr[0];
+
+      if(data.Info_one == Email && data.Info_two  == pass){
+getback("/")
+      } 
+      else{
+        if(data.Info_one === ""){
+          setemailborder("2px solid red")
+        }
+        else if(data.Info_two === ""){
+          setpassborder("2px solid red");
+
+        }
+        else{
+          setemailborder("2px solid red");
+          setpassborder("2px solid red");
+
+        }
+      }
+    }
+
+const SignUp = ()=>{
+  navigate("/signup")
+}
+
     
   const ShowPass = ()=>{
 
@@ -16,17 +56,34 @@ const [Passname,Setpassname] = useState("password")
       
         }
       }
+
+      const ChangeTheme1 = ()=>{
+          setTheme1("white");
+      setTheme2("transparent")
+
+         
+      }
+      const ChangeTheme2 = ()=>{
+        setTheme2("white");
+      setTheme1("transparent")
+    }
+//     const Homepage = ()=>{
+// getback("/home");
+
+//     }
   return (
     <div>
      
-      <form action="" style={{margin:"auto",textAlign:"center"}}>
+      <form  onSubmit={Runprogram} action="" style={{margin:"auto",textAlign:"center",backgroundColor:"",height:"",display:"flex"}}>
+<div style={{position:"relative",top:"10.9vw",width:"19.5vw",heigth:"23vw",backgroundColor:"#572e6b"}}>
 
+</div>
 
-        <div style={{border:"2px solid black",width:"60vw",margin:"auto",height:"32vw",paddingTop:"2vw",backgroundColor:"#41265c"}}>
+        <div style={{border:"2px solid black",width:"60vw",margin:"auto",height:"32vw",paddingTop:"2vw",backgroundColor:"#41265c",position:"sticky"}}>
         <div style={{display:"flex",justifyContent:"space-between",width:"37vw",margin:"auto",paddingLeft:"0vw"}}>
         <div>
 <button className='formButton2'>
-    <svg style={{height:"2.5vw",width:"4vw",position:"relative"}}   viewBox = "0 0 20 20">
+    <svg   style={{height:"2.5vw",width:"4vw",position:"relative"}}   viewBox = "0 0 20 20">
         <g fill = "none">
 <path d = "M17.876 10.284c0-.574-.052-1.127-.147-1.657H10.1v3.134h4.36a3.726 3.726 0 01-1.617 2.444v2.033h2.618c1.531-1.41 2.415-3.487 2.415-5.954z"
 fill = "#4285F4"
@@ -71,13 +128,13 @@ fill = "#34A853"
        <div  style={{margin:"auto",height:"7vh",width:"50vw",textAlign:"left",paddingLeft:"12vw",fontSize:"18px",marginTop:"2vw"}}>
        <label style={{color:"white"}} htmlFor="">Email</label>
         <br/>
-        <input placeholder='Email' style={{fontSize:"18px",height:"6vh",width:"37.5vw",background:"transparent",border:"2px solid white"}} type="email"  />
+        <input onClick={ChangeTheme1} onChange = {(e)=>setEmail(e.target.value)} placeholder='Email' style={{fontSize:"18px",height:"6vh",width:"37.5vw",background:Theme1,border:emailborder}} type="email" value = {Email} />
        </div>
 
        <div  style={{margin:"auto",height:"7vh",width:"50vw",textAlign:"left",paddingLeft:"12vw",fontSize:"18px",marginTop:"3vw"}}>
        <label style={{color:"white"}} htmlFor="">Password</label>
         <br/>
-        <input placeholder='Password' style={{marginBottom:"2vw",fontSize:"18px",height:"6vh",width:"37.5vw",background:"transparent",border:"2px solid white"}} type={Passname}  />
+        <input onClick={ChangeTheme2} onChange = {(e)=>Setpass(e.target.value)} placeholder='Password' style={{marginBottom:"2vw",fontSize:"18px",height:"6vh",width:"37.5vw",background:Theme2,border:passborder}} type={Passname} value = {pass}  />
 
         <svg  onClick = {ShowPass} style = {{position:'relative',right:'2.5vw',top:"0.8vw"}} width = "35" height= "35" fill = "#FCE5D8" viewBox = "0 0 20 20 ">
     <g className='Symbols' stroke = "none" strokeWidth="1" fill = "none" fill-rule = "evenodd">
@@ -105,7 +162,7 @@ fill = "#34A853"
        <div  style={{paddingRight:"12vw",margin:"auto",height:"7vh",width:"50vw",textAlign:'right',paddingLeft:"0vw",fontSize:"18px",marginTop:"2vw"}}>
        <label style={{textDecoration:"underline",color:'white'}} htmlFor="">Forgot Password?</label>
         <br/>
-        <input className='Loginin' style={{marginTop:"2vw",marginBottom:"1vw",borderRadius:"1.8vw",fontSize:"18px",height:"7vh",width:"37.5vw",}} type="submit" value="Log in"  />
+        <input className='Loginin' style={{marginTop:"2vw",marginBottom:"1vw",borderRadius:"1.8vw",fontSize:"18px",height:"7vh",width:"37.5vw",color:"white"}} type="submit" value="Log in"  />
 
        </div>
 
@@ -118,20 +175,23 @@ fill = "#34A853"
       <span style={{fontSize:"18px",position:'relative',bottom:'8px',color:"white"}}>  Company login (SS0)</span>
        </div>
        </div>
+<div style={{position:"relative",top:"10.9vw",width:"19.5vw",heigth:"22vw",backgroundColor:"#572e6b"}}></div>
+
       </form>
 
 
-      <div style={{margin:"auto",paddingTop:"3vw"}}>
+      <div style={{margin:"auto",paddingTop:"3vw",marginBottom:"0vw",backgroundColor:"#572e6b"}}>
     <div style={{textAlign:'center',fontSize:"1.2vw" ,height:"3vw",width:'18vw',margin:"auto"}} >  Don't have an account?</div>
-    <div style={{height:"5vw",width:'20vw',margin:"auto",textAlign:"center"}} >
-        <button className='signupbyn' style={{height:"3.5vw",width:"13vw",borderRadius:'2vw',fontSize:"17px",color:"white"}} >
+    <div style={{height:"5vw",width:'100%',margin:"auto",textAlign:"center",backgroundColor:"#572e6b"}} >
+        <button onClick={SignUp} className='signupbyn' style={{height:"3.5vw",width:"13vw",borderRadius:'2vw',fontSize:"17px",color:"white"}} >
             Sign up for free
         </button>
     </div>
       </div>
-<div style={{height:"20vw",backgroundColor:"red"}}>
 
-</div>
+
+
+<Footer/>
     </div>
   )
 }

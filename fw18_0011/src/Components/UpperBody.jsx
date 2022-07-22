@@ -1,6 +1,7 @@
 import React, { useEffect, useState,useRef } from 'react'
 import './navbar.css'
 import Footer from './day3/Footerpage';
+// import Below from './day3/below';
 
 const Upperbase = () => {
   const [Timer,setTimer] = useState(0);
@@ -270,14 +271,260 @@ const Checkdata  = ()=>{
           </div>
 
 
-          <div style={{marginTop:"1vw",fontSize:"21px",marginBottom:"5vw"}}>
+          <div style={{marginTop:"1vw",fontSize:"21px",marginBottom:"4vw"}}>
             <span style={{color:"white"}}>Onboarding a team?</span> <span style={{marginLeft:"10px"}}> <a style={{textDecoration:"none"}} href="">Book a demo</a> </span>
           </div>
 
         </div>
       </div>
 
-     
+      {/* background: #FFF3ED; */}
+      {/* background: #FFF3ED; */}
+<div style={{backgroundColor:"#FFF3ED",paddingTop:'8vw',height:"100vw"}}>
+<div style={{backgroundColor:"#FFF3ED",fontSize:"3vw",width:"48vw",fontWeight:"500",margin:"auto",height:"12vw"}} >
+  
+  Toggl Track saves you <em style={{color:"#d45dd0"}}>
+   time and money
+  </em>
+
+  , no matter how you use it.
+  
+</div>
+
+
+
+<div className='divmainbranch'>
+
+
+{/* background: #FAE5F7; */}
+<div className='divmain1' style={{marginLeft:"13vw",backgroundColor:"#FAE5F7"}}> 
+
+<p style={{color:"#d45dd0",fontSize:"20px",fontWeight:"600"}}>
+Billing and Invoicing
+</p>
+<p  style={{color:"#d45dd0",fontSize:"28px",fontWeight:"600",width:"24vw",color :"black"}}>
+Do you <em> sell your time?</em><br />
+We'll help you get the numbers right. Every time.
+</p>
+<button style={{position:'relative',bottom:'12vw',color:"white",backgroundColor:"#e675bc"}} className='btn'>Learn more</button> <img style={{position:'relative',right:"5vw"}} src={require('./money.png')} />
+
+<p style = {{width:"26vw",marginLeft:'2vw',fontWeight:"600"}}>
+"We saved $18,000 by identifying missing billable hours, thanks to Toggl Track"
+</p>
+<p style={{paddingLeft:"2vw"}} >
+  <a href="">Platinum Companies, Operations Consulting</a>
+</p>
+</div>
+
+
+{/* 
+<div className='divmain2'>
+
+<p>
+Billing and Invoicing
+</p>
+<p>
+Do you <em> sell your time?</em><br />
+We'll help you get the numbers right. Every time.
+</p>
+<button>Learn more</button> <img src={require('./money.png')} />
+
+<p>
+"We saved $18,000 by identifying missing billable hours, thanks to Toggl Track"
+</p>
+<p>
+  <a href="">Platinum Companies, Operations Consulting</a>
+</p>
+</div> */}
+
+{/* background: #FCE5D8; */}
+
+<div className='divmain1' style={{marginRight:"13vw",backgroundColor:"#FCE5D8"}}>
+
+<p style={{color:"#d45dd0",fontSize:"20px",fontWeight:"600"}}>
+Employee Time Tracking
+</p>
+<p  style={{color:"#d45dd0",fontSize:"28px",fontWeight:"600",width:"24vw",color:"black"}}>
+Improve team productivity and <em> happiness</em>  without the micromanagement.
+</p>
+<button style={{position:'relative',bottom:'12vw',color:"white",backgroundColor:"#e675bc"}} className='btn'>Learn more</button> <img style={{position:'relative',right:"5vw"}} src={require('./user.png')} />
+
+<p style = {{width:"26vw",marginLeft:'2vw',fontWeight:"600"}}>
+"We had a 100% adoption rate. Toggl Track was wholeheartedly accepted by everyone."
+</p>
+<p style={{paddingLeft:"2vw"}} >
+  <a href="">Newlogic, Software Consulting</a>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div className = "projectdiv">
+
+
+
+
+{/* background: #FCE5D8; */}
+  <div style={{backgroundColor:"#FCE5D8",marginLeft:"12vw"}} className = "learndiv">
+<h3 style={{color:"#d45dd0"}}>Project Budgeting</h3>
+<p style={{fontSize:"23px",fontWeight:"600"}}>No more anxiety over late deadlines and unprofitable projects. Plan and set budgets with confidence!</p>
+
+<p style={{marginTop:"5vw",fontSize:"17px",fontWeight:"400",color:"#564260"}}>
+Learn more <img style = {{height:"1vw",position:"relative",top:'3px'}} src="https://img.icons8.com/sf-black-filled/344/chevron-right.png" alt="" />
+</p>
+  </div>
+
+
+
+  {/* background: #ffebbd; */}
+
+  <div style = {{backgroundColor:"#ffebbd"}} className = "learndiv">
+<h3 style={{color :"#d45dd0"}}>Project Budgeting</h3>
+<p style={{fontSize:"23px",fontWeight:"600"}}>No more anxiety over late deadlines and unprofitable projects. Plan and set budgets with confidence!</p>
+
+<p style={{marginTop:"5vw",fontSize:"17px",fontWeight:"400",color:"#564260"}}>
+Learn more <img style = {{height:"1vw",position:"relative",top:'3px'}} src="https://img.icons8.com/sf-black-filled/344/chevron-right.png" alt="" />
+</p>
+  </div>
+
+
+
+
+  {/* background: #FAE5F7; */}
+
+  <div style={{backgroundColor:"#FAE5F7",marginRight:"12vw"}} className = "learndiv">
+<h3  style={{color :"#d45dd0"}}>Project Budgeting</h3>
+<p style={{fontSize:"23px",fontWeight:"600"}}>No more anxiety over late deadlines and unprofitable projects. Plan and set budgets with confidence!</p>
+
+<p style={{marginTop:"5vw",fontSize:"17px",fontWeight:"400",color:"#564260"}}>
+Learn more <img style = {{height:"1vw",position:"relative",top:'3px'}} src="https://img.icons8.com/sf-black-filled/344/chevron-right.png" alt="" />
+</p>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<div className = "skewdiv">
+<img style={{position:'relative',left:"22vw",bottom:"9vw",width:"29vw"}} src={require('./slide.png')} />
+
+<div style={{width:"38vw",textAlign:"justify",fontWeight:"500",marginLeft:"12vw",position:"relative",bottom :"9vw"}} className = "goal">
+70,000+ customers use Toggl Track to hit their productivity and business goals
+ </div>
+
+
+
+
+ {/* font-family: 'GT Haptik Medium',sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: clamp(3rem * 0.55, 3.5vw, 3rem);
+    margin-bottom: 8px; */}
+    {/* padding: 30px;
+    text-align: center;
+    background: #FFF3ED; */}
+
+ <div style={{display:"flex",justifyContent:"space-evenly",position:"relative",bottom:"5vw",right:"4vw"}}>
+<div style  = {{border :'2px solid white',width:"20vw",height:"36vh",backgroundColor:"#FFF3ED",marginLeft:"28vh"}} className='skewdiv1'>
+  <span style={{color:"#EA96E0",fontSize:"3.5vw",fontWeight:"600",fontSize:"clamp(3rem*0.55,3.5vw,3rem)"}}>
+  ↑
+  </span>
+  <span style = {{color:"black",fontSize:"3vw",fontWeight:"600"}}>
+    20%
+  </span>
+
+  <p>
+  Toggl Track increased PR Agency Sweat+Co’s profitability by at least 20% with accurate billable hours tracking.
+  </p>
+
+<p style={{color:"#EA96E0"}}>Read case study <img style = {{height:"1vw",position:"relative",top:'3px'}} src="https://img.icons8.com/sf-black-filled/344/chevron-right.png" alt="" /> </p>
+</div>
+
+<div style  = {{border :'2px solid white',width:"20vw",height:"36vh",backgroundColor:"#FFF3ED"}} className='skewdiv1'>
+  <span style={{color:"#EA96E0",fontSize:"3.5vw",fontWeight:"600",fontSize:"clamp(3rem*0.55,3.5vw,3rem)"}}>
+  ↑
+  </span>
+  <span style = {{color:"black",fontSize:"3vw",fontWeight:"600"}}>
+    20%
+  </span>
+
+  <p>
+  Toggl Track increased PR Agency Sweat+Co’s profitability by at least 20% with accurate billable hours tracking.
+  </p>
+
+<p style={{color:"#EA96E0"}}>Read case study <img style = {{height:"1vw",position:"relative",top:'3px'}} src="https://img.icons8.com/sf-black-filled/344/chevron-right.png" alt="" /> </p>
+</div>
+
+
+<div style  = {{border :'2px solid white',width:"20vw",height:"36vh",backgroundColor:"#FFF3ED",marginRight:"28vh"}} className='skewdiv1'>
+  <span style={{color:"#EA96E0",fontSize:"3.5vw",fontWeight:"600",fontSize:"clamp(3rem*0.55,3.5vw,3rem)"}}>
+  ↑
+  </span>
+  <span style = {{color:"black",fontSize:"3vw",fontWeight:"600"}}>
+    20%
+  </span>
+
+  <p>
+  Toggl Track increased PR Agency Sweat+Co’s profitability by at least 20% with accurate billable hours tracking.
+  </p>
+
+<p style={{color:"#EA96E0"}}>Read case study <img style = {{height:"1vw",position:"relative",top:'3px'}} src="https://img.icons8.com/sf-black-filled/344/chevron-right.png" alt="" /> </p>
+</div>
+
+
+
+
+
+
+
+ </div>
+
+ <div>
+
+ </div>
+
+
+ <div style={{paddingTop:"5vh",height:"49vh"}} className = "brand">
+ <img src={require('./brand.png')} />
+ <p style = {{marginTop:"5vw"}}>
+  <button className='startbtn' style = {{height:"9vh",width:"15vw",fontSize:"15px",fontWeight:"600",borderRadius:"2vw"}}>
+  Start tracking for free
+  </button>
+  <span  style={{marginLeft:"2vw",fontSize:"18px",fontWeight:"600",color:"#c938c4"}}>
+  Or book a demo  <img style = {{height:"1vw",position:"relative",top:'3px'}} src="https://img.icons8.com/sf-black-filled/344/chevron-right.png" alt="" />
+  </span>
+ </p>
+ </div>
+</div>
+<Footer/>
       </>
    
   )
