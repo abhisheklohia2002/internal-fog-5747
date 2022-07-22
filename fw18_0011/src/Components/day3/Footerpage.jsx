@@ -1,5 +1,5 @@
 import React from 'react'
-import Below from './below'
+// import Below from './below'
 import "./footer.css"
 const Footer = () => {
   return (
@@ -334,7 +334,7 @@ const Footer = () => {
 </div>
 </div>
 </div>
-<Below/>
+{/* <Below/> */}
 
     </div>
   )
