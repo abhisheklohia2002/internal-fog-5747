@@ -138,7 +138,7 @@ Careers
             <div style={{color:allback}} className='navsecond'>
 
                 <div className='smallbox' style={{display:"flex",justifyContent:"space-evenly",color:allback}}>
-                <div className='item' style={{height:"2vw"}}>Book a demo</div>
+                <div className='item' style={{height:"2vw"}}> <Link className='Link' style={{textDecoration:"none"}} to = "/demo"> Book a demo</Link> </div>
                 <div className='item'>|</div>
                 <div  className='item' style={{height:"2vw"}}> <Link className='Link' style={{textDecoration:"none" , color:allback}} to = "/login"> Log in</Link></div>
                 </div>
